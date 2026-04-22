@@ -70,6 +70,11 @@ public class Kigyo {
     }
 ```
 
+### Class sorting
+````
+    Collections.sort(madarak,(a,b) -> a.getSuly() - b.getSuly())
+````
+
 ### Files.write:
 
 ````
