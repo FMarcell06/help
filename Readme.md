@@ -75,6 +75,26 @@ public class Kigyo {
     Collections.sort(madarak,(a,b) -> a.getSuly() - b.getSuly())
 ````
 
+### TreeMap kategorizálás
+````
+    TreeMap<Integer,Integer> map = new Treemap<>();
+    for(Fovaros elem:varosok){
+        int alsoHatar = (elem.getFovarosLakossag() / 5000000) * 5000000;
+
+        if(!map.containskey(alsoHatar)){
+            map.put(alsohatar,1);
+        }else{
+            map.merge(alsohatar,1,(a,b)->a+b);
+        }
+    }
+
+    for(var e:map.entrySet()){
+        int also = e.getKey();
+        int felso = also + 4999999;
+        System.out.printf("%12s - %12s: %d\n",String.format("%d",also),String.format("%d",felso),e.getValue()) 
+    }
+````
+
 ### Files.write:
 
 ````
